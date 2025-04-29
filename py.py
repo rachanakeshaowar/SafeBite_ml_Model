@@ -35,3 +35,4 @@ except Exception as e:
 def ocr_to_text(image_path):
     """Performs OCR on the image and returns the extracted text."""
     try:
+      img = Image.open(image_path)
