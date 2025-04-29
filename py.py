@@ -24,4 +24,5 @@ SYM_SPELL_EDIT_DISTANCE = 1
 
 # --- Setup ---
 try:
+   sym_spell
 
