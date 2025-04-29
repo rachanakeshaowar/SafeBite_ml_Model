@@ -33,3 +33,4 @@ except Exception as e:
    
   # --- OCR Function---
 def ocr_to_text(image_path):
+    """Performs OCR on the image and returns the extracted text."""
