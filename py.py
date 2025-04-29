@@ -18,3 +18,4 @@ IMAGE_PATH = "/content/Maggie.jpg" # Replace with your image path
 
 
 MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+MAX_OCR_CHARS = 3000
