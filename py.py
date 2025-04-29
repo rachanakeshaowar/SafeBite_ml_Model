@@ -27,4 +27,4 @@ try:
    sym_spell = SymSpell(max_dictionary_edit_distance=SYM_SPELL_EDIT_DISTANCE, prefix_length=7)
    sym_spell.load_dictionary('frequency_dict.txt', term_index=0, count_index=1)
    logging.info("SymSpell dictionary loaded.")
-
+except Exception as e:
