@@ -24,5 +24,5 @@ SYM_SPELL_EDIT_DISTANCE = 1
 
 # --- Setup ---
 try:
-   sym_spell
+   sym_spell = SymSpell(max_dictionary_edit_distance=SYM_SPELL_EDIT_DISTANCE, prefix_length=7)
 
