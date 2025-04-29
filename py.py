@@ -30,3 +30,5 @@ try:
 except Exception as e:
    logging.error(f"Failed to load SymSpell dictionary: {e}")
    sym_spell = None
+   
+  # --- OCR Function---
