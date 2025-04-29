@@ -32,3 +32,4 @@ except Exception as e:
    sym_spell = None
    
   # --- OCR Function---
+def ocr_to_text(image_path):
