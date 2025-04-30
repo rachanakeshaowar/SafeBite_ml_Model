@@ -44,3 +44,4 @@ def ocr_to_text(image_path):
        logging.error(f"Error: Image file not found at {image_path}")
        return None
     except Exception as e:
+       logging.error(f"Error during OCR processing: {e}")
