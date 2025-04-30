@@ -47,3 +47,4 @@ def ocr_to_text(image_path):
        logging.error(f"Error during OCR processing: {e}")
        return None
 # --- Ingredient Cleaning Function  ---
+def clean_ingredients(text):
