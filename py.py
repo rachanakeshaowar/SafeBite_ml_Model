@@ -56,3 +56,4 @@ def clean_ingredients(text):
    start_index = -1
    ingredient_text = text
    for marker in ingredient_markers:
+      try:
