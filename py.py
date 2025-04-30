@@ -38,3 +38,4 @@ def ocr_to_text(image_path):
       img = Image.open(image_path)
       img_gray = img.convert('L')
       text = pytesseract.image_to_string(img_gray, config='--psm 6').strip()
+      logging.info(f"OCR successful for {image_path}. Text length: {len(text)}")
