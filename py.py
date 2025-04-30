@@ -40,3 +40,4 @@ def ocr_to_text(image_path):
       text = pytesseract.image_to_string(img_gray, config='--psm 6').strip()
       logging.info(f"OCR successful for {image_path}. Text length: {len(text)}")
       return text[:MAX_OCR_CHARS]
+    except FileNotFoundError:
