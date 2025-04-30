@@ -49,3 +49,4 @@ def ocr_to_text(image_path):
 # --- Ingredient Cleaning Function  ---
 def clean_ingredients(text):
    """Cleans the OCR text to extract a list of ingredients."""
+   if not text:
