@@ -45,3 +45,4 @@ def ocr_to_text(image_path):
        return None
     except Exception as e:
        logging.error(f"Error during OCR processing: {e}")
+       return None
