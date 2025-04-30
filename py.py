@@ -54,3 +54,4 @@ def clean_ingredients(text):
    text = ' '.join(text.split()).lower()
    ingredient_markers = ["ingredients:", "contains:", "ingredients :", "contains :"]
    start_index = -1
+   ingredient_text = text
