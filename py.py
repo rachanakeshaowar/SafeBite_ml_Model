@@ -41,3 +41,4 @@ def ocr_to_text(image_path):
       logging.info(f"OCR successful for {image_path}. Text length: {len(text)}")
       return text[:MAX_OCR_CHARS]
     except FileNotFoundError:
+       logging.error(f"Error: Image file not found at {image_path}")
