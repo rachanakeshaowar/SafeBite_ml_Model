@@ -117,12 +117,15 @@ def load_model():
         )
         
         tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        if tokenizer.pad_token is None: 
-           logging.info("Tokenizer missing pad token, setting to EOS token.")
-           tokenizer.pad_token = tokenizer.eos_token        
-         
-         
-         
-         
-         
-         
+        if tokenizer.pad_token is None:
+            
+             logging.info("Tokenizer missing pad token, setting to EOS token.")
+             tokenizer.pad_token = tokenizer.eos_token
+             
+        model = AutoModelForCausalLM.from_pretrained(
+            MODEL_NAME,
+            quantization_config=quantization_config,
+            device_map="auto",
+            torch_dtype=torch.bfloat16,
+           
+        )
