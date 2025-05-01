@@ -109,7 +109,8 @@ def load_model():
        logging.info(f"Model {MODEL_NAME} already loaded.")
        return True 
     logging.info(f"Loading model: {MODEL_NAME}")
-    try:            
+    try: 
+       quantization_config = BitsAndBytesConfig(           
          
          
          
