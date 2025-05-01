@@ -116,7 +116,8 @@ def load_model():
             bnb_4bit_compute_dtype=torch.bfloat16 
         )
         
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)         
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        if tokenizer.pad_token is None:         
          
          
          
