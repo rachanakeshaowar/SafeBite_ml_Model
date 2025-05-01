@@ -140,3 +140,4 @@ def load_model():
         pipe.model_name = MODEL_NAME
         logging.info("Model loaded successfully.")
         return True
+    except Exception as e:
