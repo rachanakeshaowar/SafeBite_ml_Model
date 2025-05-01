@@ -153,4 +153,4 @@ def analyze_ingredients_llm(ingredients):
       return {"error": "Model not loaded"}
    if not ingredients:
       logging.warning("No ingredients provided for analysis.")
-      
+      return {"analysis": []}
