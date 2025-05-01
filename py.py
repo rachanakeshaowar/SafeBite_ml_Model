@@ -90,6 +90,7 @@ def clean_ingredients(text):
                      best_suggestion = suggestions[0].term
                      if not (any(char.isdigit() for char in cleaned_ing) and not any(char.isdigit() for char in best_suggestion)):
                         if best_suggestion != cleaned_ing:
+                           logging.info(f"SymSpell corrected '{cleaned_ing}' to '{best_suggestion}' (distance {suggestions[0].distance})")
                
          
          
