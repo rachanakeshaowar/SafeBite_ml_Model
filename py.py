@@ -87,6 +87,7 @@ def clean_ingredients(text):
                if sym_spell:
                   suggestions = sym_spell.lookup(cleaned_ing, Verbosity.CLOSEST, max_edit_distance=SYM_SPELL_EDIT_DISTANCE, include_unknown=True)
                   if suggestions and suggestions[0].distance < SYM_SPELL_EDIT_DISTANCE + 1: # Only correct if close enough
+                     best_suggestion = suggestions[0].term
                
          
          
