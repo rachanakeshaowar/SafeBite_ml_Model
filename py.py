@@ -59,4 +59,5 @@ def clean_ingredients(text):
       try:
          idx = text.index(marker)
           # Check if this marker is preceded by nutrition info
-          preceding_text = text[:idx]
+         preceding_text = text[:idx]
+         if "nutrition facts" not in preceding_text and "serving size" not in preceding_text:
