@@ -145,3 +145,4 @@ def load_model():
        model = None
        tokenizer = None
        pipe = None
+       return False
