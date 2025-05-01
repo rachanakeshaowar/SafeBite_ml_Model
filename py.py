@@ -133,3 +133,4 @@ def load_model():
            "text-generation",
            model=model,
            tokenizer=tokenizer,
+           torch_dtype=torch.bfloat16,
