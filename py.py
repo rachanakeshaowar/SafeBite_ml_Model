@@ -57,3 +57,4 @@ def clean_ingredients(text):
    ingredient_text = text
    for marker in ingredient_markers:
       try:
+         idx = text.index(marker)
