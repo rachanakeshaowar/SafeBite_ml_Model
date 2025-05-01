@@ -94,6 +94,8 @@ def clean_ingredients(text):
                         corrected_ing = best_suggestion
                      else:
                             logging.info(f"SymSpell skipped correction for '{cleaned_ing}' due to number mismatch.")
+               if corrected_ing and corrected_ing not in cleaned: # Check non-empty after potential correction
+                  cleaned.append(corrected_ing)
                
          
          
