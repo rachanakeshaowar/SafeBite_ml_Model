@@ -138,4 +138,5 @@ def load_model():
             )
          # Store model name for checking later
         pipe.model_name = MODEL_NAME
-       
+        logging.info("Model loaded successfully.")
+        return True
