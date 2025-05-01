@@ -144,3 +144,4 @@ def load_model():
        logging.error(f"Error loading model {MODEL_NAME}: {e}", exc_info=True) # Log traceback
        model = None
        tokenizer = None
+       pipe = None
