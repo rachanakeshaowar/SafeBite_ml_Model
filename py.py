@@ -64,3 +64,4 @@ def clean_ingredients(text):
             start_index = idx + len(marker)
          logging.info(f"Found potential ingredient marker '{marker}'")
          ingredient_text = text[start_index:]
+         break # Use the first valid marker found
