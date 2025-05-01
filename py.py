@@ -146,3 +146,4 @@ def load_model():
        tokenizer = None
        pipe = None
        return False
+def analyze_ingredients_llm(ingredients):
