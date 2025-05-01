@@ -154,3 +154,4 @@ def analyze_ingredients_llm(ingredients):
    if not ingredients:
       logging.warning("No ingredients provided for analysis.")
       return {"analysis": []}
+   ingredient_list_str = ', '.join(ingredients)
