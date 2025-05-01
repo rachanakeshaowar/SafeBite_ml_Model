@@ -82,6 +82,7 @@ def clean_ingredients(text):
          for ing in potential_ingredients:
             cleaned_ing = re.sub(r"^[^\w(]+|[^\w)]+$", "", ing.strip()).strip() # Allow starting '(' and ending ')'
             cleaned_ing = cleaned_ing.replace(' :', '') # Remove stray colons
+            if cleaned_ing and len(cleaned_ing) > 1 and not cleaned_ing.isdigit():
          
          
          
