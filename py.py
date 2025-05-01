@@ -129,3 +129,4 @@ def load_model():
             torch_dtype=torch.bfloat16,
            
         )
+        pipe = pipeline(
