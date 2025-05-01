@@ -132,3 +132,4 @@ def load_model():
         pipe = pipeline(
            "text-generation",
            model=model,
+           tokenizer=tokenizer,
