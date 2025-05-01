@@ -148,3 +148,4 @@ def load_model():
        return False
 def analyze_ingredients_llm(ingredients):
    global pipe
+   if not pipe:
