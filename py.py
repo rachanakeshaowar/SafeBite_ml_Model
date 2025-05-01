@@ -92,7 +92,8 @@ def clean_ingredients(text):
                         if best_suggestion != cleaned_ing:
                            logging.info(f"SymSpell corrected '{cleaned_ing}' to '{best_suggestion}' (distance {suggestions[0].distance})")
                         corrected_ing = best_suggestion
-                        else:
+                     else:
+                            logging.info(f"SymSpell skipped correction for '{cleaned_ing}' due to number mismatch.")
                
          
          
