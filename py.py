@@ -75,3 +75,4 @@ def clean_ingredients(text):
       if marker_index != -1:
          logging.info(f"Removing text after '{marker}'")
          ingredient_text = ingredient_text[:marker_index].strip()   
+         ingredient_text = re.sub(r'less than \d+% of\s*[:]*\s*', '', ingredient_text, flags=re.IGNORECASE)
