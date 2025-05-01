@@ -73,4 +73,5 @@ def clean_ingredients(text):
    for marker in end_markers:
       marker_index = ingredient_text.find(marker)
       if marker_index != -1:
-         logging.info(f"Removing text after '{marker}'")   
+         logging.info(f"Removing text after '{marker}'")
+         ingredient_text = ingredient_text[:marker_index].strip()   
