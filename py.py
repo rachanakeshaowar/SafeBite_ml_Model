@@ -58,3 +58,4 @@ def clean_ingredients(text):
    for marker in ingredient_markers:
       try:
          idx = text.index(marker)
+          # Check if this marker is preceded by nutrition info
