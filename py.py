@@ -141,3 +141,4 @@ def load_model():
         logging.info("Model loaded successfully.")
         return True
     except Exception as e:
+       logging.error(f"Error loading model {MODEL_NAME}: {e}", exc_info=True) # Log traceback
