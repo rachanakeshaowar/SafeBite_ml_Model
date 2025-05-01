@@ -152,3 +152,5 @@ def analyze_ingredients_llm(ingredients):
       logging.error("LLM Pipeline not available.")
       return {"error": "Model not loaded"}
    if not ingredients:
+      logging.warning("No ingredients provided for analysis.")
+      
