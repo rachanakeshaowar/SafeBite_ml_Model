@@ -89,6 +89,7 @@ def clean_ingredients(text):
                   if suggestions and suggestions[0].distance < SYM_SPELL_EDIT_DISTANCE + 1: # Only correct if close enough
                      best_suggestion = suggestions[0].term
                      if not (any(char.isdigit() for char in cleaned_ing) and not any(char.isdigit() for char in best_suggestion)):
+                        if best_suggestion != cleaned_ing:
                
          
          
