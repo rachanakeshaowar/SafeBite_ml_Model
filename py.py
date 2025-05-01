@@ -85,6 +85,7 @@ def clean_ingredients(text):
             if cleaned_ing and len(cleaned_ing) > 1 and not cleaned_ing.isdigit():
                corrected_ing = cleaned_ing
                if sym_spell:
+                  suggestions = sym_spell.lookup(cleaned_ing, Verbosity.CLOSEST, max_edit_distance=SYM_SPELL_EDIT_DISTANCE, include_unknown=True)
                
          
          
