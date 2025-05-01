@@ -103,7 +103,8 @@ model = None
 tokenizer = None
 pipe = None
 
-def load_model():              
+def load_model():
+    global model, tokenizer, pipe              
          
          
          
