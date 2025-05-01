@@ -149,3 +149,4 @@ def load_model():
 def analyze_ingredients_llm(ingredients):
    global pipe
    if not pipe:
+      logging.error("LLM Pipeline not available.")
