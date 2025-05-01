@@ -62,3 +62,4 @@ def clean_ingredients(text):
          preceding_text = text[:idx]
          if "nutrition facts" not in preceding_text and "serving size" not in preceding_text:
             start_index = idx + len(marker)
+         logging.info(f"Found potential ingredient marker '{marker}'")
