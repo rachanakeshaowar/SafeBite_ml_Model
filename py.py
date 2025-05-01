@@ -59,3 +59,4 @@ def clean_ingredients(text):
       try:
          idx = text.index(marker)
           # Check if this marker is preceded by nutrition info
+          preceding_text = text[:idx]
