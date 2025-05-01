@@ -81,6 +81,7 @@ def clean_ingredients(text):
          cleaned = []
          for ing in potential_ingredients:
             cleaned_ing = re.sub(r"^[^\w(]+|[^\w)]+$", "", ing.strip()).strip() # Allow starting '(' and ending ')'
+            cleaned_ing = cleaned_ing.replace(' :', '') # Remove stray colons
          
          
          
