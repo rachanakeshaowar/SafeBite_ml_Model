@@ -134,3 +134,4 @@ def load_model():
            model=model,
            tokenizer=tokenizer,
            torch_dtype=torch.bfloat16,
+           device_map="auto"
