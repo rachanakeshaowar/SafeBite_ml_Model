@@ -98,7 +98,10 @@ def clean_ingredients(text):
                   cleaned.append(corrected_ing)
             
          logging.info(f"Found {len(cleaned)} potential ingredients.")
-               
+# --- LLM Analysis Function ---
+model = None
+tokenizer = None
+pipe = None              
          
          
          
