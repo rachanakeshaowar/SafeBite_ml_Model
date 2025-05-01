@@ -110,7 +110,8 @@ def load_model():
        return True 
     logging.info(f"Loading model: {MODEL_NAME}")
     try: 
-       quantization_config = BitsAndBytesConfig(           
+        quantization_config = BitsAndBytesConfig(
+            load_in_4bit=True,          
          
          
          
