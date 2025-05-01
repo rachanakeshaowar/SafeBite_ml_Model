@@ -66,3 +66,4 @@ def clean_ingredients(text):
          ingredient_text = text[start_index:]
          break # Use the first valid marker found
       except ValueError:
+         continue
