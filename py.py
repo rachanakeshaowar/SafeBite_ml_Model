@@ -71,3 +71,4 @@ def clean_ingredients(text):
       logging.warning("Could not find a clear ingredient start marker. Attempting cleanup on full text.")
    end_markers = ["nutrition facts", "serving size", "% daily value", "manufactured by", "distributed by", "produced by"]
    
+   
