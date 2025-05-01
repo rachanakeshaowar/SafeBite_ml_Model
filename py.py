@@ -101,7 +101,9 @@ def clean_ingredients(text):
 # --- LLM Analysis Function ---
 model = None
 tokenizer = None
-pipe = None              
+pipe = None
+
+def load_model():              
          
          
          
