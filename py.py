@@ -79,6 +79,7 @@ def clean_ingredients(text):
          ingredient_text = re.sub(r'contains \d+% or less of\s*[:]*\s*', '', ingredient_text, flags=re.IGNORECASE)
          potential_ingredients = re.split(r'[;,]\s*(?![^()]*\))|\.\s+(?![^()]*\))|\s+and\s+(?![^()]*\))', ingredient_text)
          cleaned = []
+         for ing in potential_ingredients:
          
          
          
