@@ -118,7 +118,8 @@ def load_model():
         
         tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
         if tokenizer.pad_token is None: 
-           logging.info("Tokenizer missing pad token, setting to EOS token.")        
+           logging.info("Tokenizer missing pad token, setting to EOS token.")
+           tokenizer.pad_token = tokenizer.eos_token        
          
          
          
