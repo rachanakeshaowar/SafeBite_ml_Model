@@ -72,4 +72,4 @@ def clean_ingredients(text):
    end_markers = ["nutrition facts", "serving size", "% daily value", "manufactured by", "distributed by", "produced by"]
    for marker in end_markers:
       marker_index = ingredient_text.find(marker)
-         
+      if marker_index != -1:   
