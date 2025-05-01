@@ -136,4 +136,6 @@ def load_model():
            torch_dtype=torch.bfloat16,
            device_map="auto"
             )
-        # Store model name for checking later
+         # Store model name for checking later
+        pipe.model_name = MODEL_NAME
+       
