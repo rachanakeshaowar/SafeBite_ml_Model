@@ -111,7 +111,9 @@ def load_model():
     logging.info(f"Loading model: {MODEL_NAME}")
     try: 
         quantization_config = BitsAndBytesConfig(
-            load_in_4bit=True,          
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.bfloat16          
          
          
          
