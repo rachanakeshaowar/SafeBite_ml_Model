@@ -104,7 +104,8 @@ tokenizer = None
 pipe = None
 
 def load_model():
-    global model, tokenizer, pipe              
+    global model, tokenizer, pipe
+    if pipe is not None and hasattr(pipe, 'model_name') and pipe.model_name == MODEL_NAME: # Check if correct model loaded              
          
          
          
