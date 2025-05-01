@@ -107,7 +107,8 @@ def load_model():
     global model, tokenizer, pipe
     if pipe is not None and hasattr(pipe, 'model_name') and pipe.model_name == MODEL_NAME: # Check if correct model loaded 
        logging.info(f"Model {MODEL_NAME} already loaded.")
-       return True             
+       return True 
+    logging.info(f"Loading model: {MODEL_NAME}")            
          
          
          
