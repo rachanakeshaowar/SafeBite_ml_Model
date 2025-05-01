@@ -80,6 +80,7 @@ def clean_ingredients(text):
          potential_ingredients = re.split(r'[;,]\s*(?![^()]*\))|\.\s+(?![^()]*\))|\s+and\s+(?![^()]*\))', ingredient_text)
          cleaned = []
          for ing in potential_ingredients:
+            cleaned_ing = re.sub(r"^[^\w(]+|[^\w)]+$", "", ing.strip()).strip() # Allow starting '(' and ending ')'
          
          
          
