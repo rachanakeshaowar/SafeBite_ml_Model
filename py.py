@@ -172,3 +172,4 @@ def analyze_ingredients_llm(ingredients):
 5.  If and ONLY if one or more ingredients meet the high threshold, add an object for EACH such ingredient to the `"analysis"` list.
 6.  Each ingredient object MUST contain EXACTLY these keys:
      *   `"ingredient"`: String. The name of the problematic ingredient. Include E-number if common (e.g., "Aspartame (E951)").
+     *   `"safety_index"`: Integer (1-3). Represents the confidence and severity of the risk: 1 = High Confidence/Severe Risk (e.g., banned substance, strong warnings), 2 = Moderate Confidence/Risk (e.g., significant controversy with strong evidence, strict limits), 3 = Lower Confidence/Specific Risk (e.g., risky only for specific vulnerable groups based on strong evidence). **DO NOT use 4 or 5.**
