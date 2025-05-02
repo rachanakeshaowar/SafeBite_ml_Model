@@ -187,4 +187,5 @@ def analyze_ingredients_llm(ingredients):
 *   Aspartame (mainly for PKU risk, flag as lower severity unless specifically asked otherwise)
 *   Olestra
 *   Specific additives banned or heavily restricted in major regions.
+**FINAL INSTRUCTION:** Before outputting, double-check: Did any ingredient CLEARLY cross the high threshold for substantial, widely recognized risk? If not, your entire output MUST BE EXACTLY `{"analysis": []}`."""
               
