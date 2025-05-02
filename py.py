@@ -199,9 +199,13 @@ def analyze_ingredients_llm(ingredients):
         # Used the tokenizer's chat template (Mistral Instruct uses [INST]...[/INST])
         # Important: add_generation_prompt=True tells the template to add the prompt for the assistant's turn
         prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    except Exception as e:
+   except Exception as e:
         logging.error(f"Could not apply chat template: {e}. Model might not generate correctly.")
         # Fallback might be needed but is model-specific and less reliable
         return {"error": f"Failed to create prompt using chat template: {e}"}
      
-    logging.info("Sending prompt to LLM.")
+   logging.info("Sending prompt to LLM.")
+    try:
+        outputs = pipe(
+            prompt,
+            max_new_tokens=1024,
