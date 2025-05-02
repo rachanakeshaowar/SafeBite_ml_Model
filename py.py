@@ -175,3 +175,4 @@ def analyze_ingredients_llm(ingredients):
      *   `"safety_index"`: Integer (1-3). Represents the confidence and severity of the risk: 1 = High Confidence/Severe Risk (e.g., banned substance, strong warnings), 2 = Moderate Confidence/Risk (e.g., significant controversy with strong evidence, strict limits), 3 = Lower Confidence/Specific Risk (e.g., risky only for specific vulnerable groups based on strong evidence). **DO NOT use 4 or 5.**
       *   `"unsafe_for"`: Object with keys:
             *   `"age_groups"`: List of strings (e.g., ["children", "infants"]). Empty `[]` if not specific.
+             *   `"diseases"`: List of strings (e.g., ["phenylketonuria"]). Empty `[]` if not specific.
