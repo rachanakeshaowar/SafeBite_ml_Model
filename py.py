@@ -222,3 +222,6 @@ def analyze_ingredients_llm(ingredients):
             generated_part = response_text[prompt_end_index + len(prompt_end_marker):].strip()
         else:
            if response_text.startswith(prompt):
+
+
+
