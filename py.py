@@ -203,3 +203,5 @@ def analyze_ingredients_llm(ingredients):
         logging.error(f"Could not apply chat template: {e}. Model might not generate correctly.")
         # Fallback might be needed but is model-specific and less reliable
         return {"error": f"Failed to create prompt using chat template: {e}"}
+     
+    logging.info("Sending prompt to LLM.")
