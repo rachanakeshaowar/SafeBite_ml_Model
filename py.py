@@ -167,3 +167,4 @@ def analyze_ingredients_llm(ingredients):
 **Output Requirements:**
 1.  Your response MUST be **ONLY** a valid JSON object. No introductory text, no explanations, no apologies, no closing remarks. Start with `{` and end with `}`.
 2.  The JSON object MUST contain a single key: `"analysis"`.
+3.  The value of `"analysis"` MUST be a list.
