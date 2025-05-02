@@ -209,3 +209,5 @@ def analyze_ingredients_llm(ingredients):
         outputs = pipe(
             prompt,
             max_new_tokens=1024,
+            do_sample=True, # Keep sampling for potentially better/more natural analysis
+            temperature=0.5, # Slightly lower temp might help structure adherence
