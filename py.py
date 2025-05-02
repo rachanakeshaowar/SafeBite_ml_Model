@@ -186,4 +186,5 @@ def analyze_ingredients_llm(ingredients):
 *   Certain Artificial Colors with strong links to health issues (e.g., Red 3, Yellow 5 in some contexts)
 *   Aspartame (mainly for PKU risk, flag as lower severity unless specifically asked otherwise)
 *   Olestra
+*   Specific additives banned or heavily restricted in major regions.
               
