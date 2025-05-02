@@ -166,3 +166,4 @@ def analyze_ingredients_llm(ingredients):
 **Apply a VERY HIGH THRESHOLD for flagging an ingredient.**
 **Output Requirements:**
 1.  Your response MUST be **ONLY** a valid JSON object. No introductory text, no explanations, no apologies, no closing remarks. Start with `{` and end with `}`.
+2.  The JSON object MUST contain a single key: `"analysis"`.
