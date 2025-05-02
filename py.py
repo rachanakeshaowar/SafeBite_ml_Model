@@ -176,3 +176,4 @@ def analyze_ingredients_llm(ingredients):
       *   `"unsafe_for"`: Object with keys:
             *   `"age_groups"`: List of strings (e.g., ["children", "infants"]). Empty `[]` if not specific.
              *   `"diseases"`: List of strings (e.g., ["phenylketonuria"]). Empty `[]` if not specific.
+              *   `"allergies"`: List of strings (e.g., ["sulfite sensitivity"]). **ONLY list if the risk goes BEYOND a typical allergic reaction.** Empty `[]` otherwise.
