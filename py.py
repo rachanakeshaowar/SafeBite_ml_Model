@@ -164,3 +164,4 @@ def analyze_ingredients_llm(ingredients):
 **Your PRIMARY directive is accuracy and avoiding false positives.** Do NOT flag ingredients based on minor controversies, niche dietary theories, common allergies (unless the ingredient itself is inherently risky beyond being an allergen), or general 'unhealthiness' like sugar or salt in typical contexts.
 
 **Apply a VERY HIGH THRESHOLD for flagging an ingredient.**
+**Output Requirements:**
