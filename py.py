@@ -168,3 +168,4 @@ def analyze_ingredients_llm(ingredients):
 1.  Your response MUST be **ONLY** a valid JSON object. No introductory text, no explanations, no apologies, no closing remarks. Start with `{` and end with `}`.
 2.  The JSON object MUST contain a single key: `"analysis"`.
 3.  The value of `"analysis"` MUST be a list.
+4.  **CRITICAL RULE:** If **NO** ingredients in the provided list meet the **HIGH THRESHOLD** for substantial and widely recognized risk, this list MUST be **EMPTY**. Example: `{"analysis": []}`. This is the expected output for safe or common ingredient lists.
