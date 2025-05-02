@@ -218,3 +218,6 @@ def analyze_ingredients_llm(ingredients):
         response_text = outputs[0]['generated_text']
         prompt_end_marker = "[/INST]"
         prompt_end_index = response_text.rfind(prompt_end_marker)
+        if prompt_end_index != -1:
+            generated_part = response_text[prompt_end_index + len(prompt_end_marker):].strip()
+        else:
