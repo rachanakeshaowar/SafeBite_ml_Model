@@ -156,3 +156,5 @@ def analyze_ingredients_llm(ingredients):
       return {"analysis": []}
    ingredient_list_str = ', '.join(ingredients)
    logging.info(f"Analyzing ingredients: {ingredient_list_str}")
+   
+   
