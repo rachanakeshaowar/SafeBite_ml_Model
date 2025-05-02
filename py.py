@@ -180,4 +180,7 @@ def analyze_ingredients_llm(ingredients):
                *   `"severity"`: String: "critical" (for index 1), "moderate" (for index 2), or "low" (for index 3, representing risk mainly to specific groups).
 **Examples of what NOT to flag (return `{"analysis": []}`):**
 *   Lists containing only: Sugar, Salt, Flour, Water, Vegetable Oil, Citric Acid, Ascorbic Acid, Natural Flavors, Spices, Vinegar, Baking Soda, Yeast, Lecithin (soy/sunflower), Milk, Eggs, Wheat, etc.
+*   Common allergens like Soy, Nuts, Dairy, Gluten when listed normally.
+*   Standard vitamins and minerals.
+*   Commonly accepted preservatives like Sodium Benzoate, Potassium Sorbate unless there's a very specific, high-risk context.
               
