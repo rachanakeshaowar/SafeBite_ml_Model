@@ -200,6 +200,7 @@ def analyze_ingredients_llm(ingredients):
         prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
    except Exception as e:
        logging.error(f"Could not apply chat template: {e}. Model might not generate correctly.")
+         # Fallback might be needed but is model-specific and less reliable
    
    
    
