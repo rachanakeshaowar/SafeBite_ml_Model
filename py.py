@@ -216,3 +216,4 @@ def analyze_ingredients_llm(ingredients):
              pad_token_id=pipe.tokenizer.pad_token_id if pipe.tokenizer.pad_token_id is not None else pipe.tokenizer.eos_token_id
         )
         response_text = outputs[0]['generated_text']
+        prompt_end_marker = "[/INST]"
