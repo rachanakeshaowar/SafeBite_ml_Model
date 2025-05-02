@@ -205,9 +205,14 @@ def analyze_ingredients_llm(ingredients):
         return {"error": f"Failed to create prompt using chat template: {e}"}
      
    logging.info("Sending prompt to LLM.")
-    try:
+   try:
         outputs = pipe(
             prompt,
             max_new_tokens=1024,
             do_sample=True, # Keep sampling for potentially better/more natural analysis
             temperature=0.5, # Slightly lower temp might help structure adherence
+            top_p=0.9,
+            eos_token_id=pipe.tokenizer.eos_token_id,
+             pad_token_id=pipe.tokenizer.pad_token_id if pipe.tokenizer.pad_token_id is not None else pipe.tokenizer.eos_token_id
+        )
+        response_text = outputs[0]['generated_text']
