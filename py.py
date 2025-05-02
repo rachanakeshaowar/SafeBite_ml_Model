@@ -183,4 +183,5 @@ def analyze_ingredients_llm(ingredients):
 *   Common allergens like Soy, Nuts, Dairy, Gluten when listed normally.
 *   Standard vitamins and minerals.
 *   Commonly accepted preservatives like Sodium Benzoate, Potassium Sorbate unless there's a very specific, high-risk context.
+*   Certain Artificial Colors with strong links to health issues (e.g., Red 3, Yellow 5 in some contexts)
               
