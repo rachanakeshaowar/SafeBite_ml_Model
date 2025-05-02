@@ -195,6 +195,8 @@ def analyze_ingredients_llm(ingredients):
             "content": f"Analyze the following ingredient list according to the strict rules and high threshold defined in the system prompt. Return ONLY the required JSON object.\n\nIngredients: {ingredient_list_str}"
         }
         ]
+   try:
+        # Used the tokenizer's chat template (Mistral Instruct uses [INST]...[/INST])
    
    
    
