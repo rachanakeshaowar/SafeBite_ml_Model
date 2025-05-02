@@ -197,7 +197,8 @@ def analyze_ingredients_llm(ingredients):
         ]
    try:
         # Used the tokenizer's chat template (Mistral Instruct uses [INST]...[/INST])
-   
+        prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    except Exception as e:
    
    
    
