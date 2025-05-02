@@ -157,4 +157,8 @@ def analyze_ingredients_llm(ingredients):
    ingredient_list_str = ', '.join(ingredients)
    logging.info(f"Analyzing ingredients: {ingredient_list_str}")
    messages = [
+      {
+            "role": "system",
+            "content": """You are a highly specialized and meticulous food safety evaluation engine. Your SOLE function is to identify ingredients from a given list that pose **SUBSTANTIAL and WIDELY RECOGNIZED health risks** based on strong scientific consensus (e.g., reports from WHO, FDA, EFSA) or significant regulatory actions (e.g., bans, strict limits) in major regions.
+
    
