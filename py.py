@@ -177,3 +177,7 @@ def analyze_ingredients_llm(ingredients):
             *   `"age_groups"`: List of strings (e.g., ["children", "infants"]). Empty `[]` if not specific.
              *   `"diseases"`: List of strings (e.g., ["phenylketonuria"]). Empty `[]` if not specific.
               *   `"allergies"`: List of strings (e.g., ["sulfite sensitivity"]). **ONLY list if the risk goes BEYOND a typical allergic reaction.** Empty `[]` otherwise.
+               *   `"severity"`: String: "critical" (for index 1), "moderate" (for index 2), or "low" (for index 3, representing risk mainly to specific groups).
+**Examples of what NOT to flag (return `{"analysis": []}`):**
+*   Lists containing only: Sugar, Salt, Flour, Water, Vegetable Oil, Citric Acid, Ascorbic Acid, Natural Flavors, Spices, Vinegar, Baking Soda, Yeast, Lecithin (soy/sunflower), Milk, Eggs, Wheat, etc.
+              
