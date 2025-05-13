@@ -223,6 +223,10 @@ def analyze_ingredients_llm(ingredients):
         else:
            if response_text.startswith(prompt):
                generated_part = response_text[len(prompt):].strip()
+           else:
+
+                  logging.warning("Could not reliably isolate generated text from prompt. Using full output.")
+                  generated_part = response_text
 
 
 
