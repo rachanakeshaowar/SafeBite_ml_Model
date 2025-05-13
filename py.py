@@ -330,6 +330,18 @@ def format_results(analysis_data):
         print("Could not detect or clean any ingredients from the OCR text.")
 
         return
+    print("\n--- Detected & Cleaned Ingredients ---")
+    print(', '.join(ingredients))
+
+    print("\n--- Requesting Analysis from LLM ---")
+    analysis_json = analyze_ingredients_llm(ingredients)
+
+    print("\n" + "=" * 50)
+    print("          Ingredient Analysis Report")
+    print("=" * 50)
+    print(format_results(analysis_json))
+    print("=" * 50)
+    logging.info(f"--- Analysis Complete for {image_path} ---")
 
 
 
