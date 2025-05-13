@@ -233,6 +233,14 @@ def analyze_ingredients_llm(ingredients):
 
    start_index = generated_part.find('{')
    end_index = generated_part.rfind('}')
+   if start_index != -1 and end_index != -1 and end_index > start_index:
+            json_str = generated_part[start_index : end_index + 1]
+            logging.info(f"Attempting to parse JSON: {json_str[:200]}...") # Log preview
+            try:
+                analysis_data = json.loads(json_str)
+                if isinstance(analysis_data, dict) and "analysis" in analysis_data and isinstance(analysis_data["analysis"], list):
+                    logging.info("Successfully parsed JSON response from LLM.")
+                    return analysis_data
 
 
 
