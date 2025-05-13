@@ -317,6 +317,13 @@ def format_results(analysis_data):
         print("##############################################")
         print("Please check the logs above for errors (e.g., Hugging Face Hub connection, memory issues).")
         return
+    raw_text = ocr_to_text(image_path)
+    if not raw_text:
+        print("\n--- OCR Failed ---")
+        print("Could not extract text from the image. Please check the image file and path.")
+        return
+    print("\n--- Raw OCR Text (Preview) ---")
+    print(raw_text[:500] + ('...' if len(raw_text) > 500 else ''))
 
 
 
