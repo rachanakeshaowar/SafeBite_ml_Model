@@ -342,7 +342,8 @@ def format_results(analysis_data):
     print(format_results(analysis_json))
     print("=" * 50)
     logging.info(f"--- Analysis Complete for {image_path} ---")
-
+if __name__ == "__main__":
+    analyze_product(IMAGE_PATH)
 
 
 
