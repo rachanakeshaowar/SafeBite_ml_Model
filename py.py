@@ -233,7 +233,7 @@ def analyze_ingredients_llm(ingredients):
 
    start_index = generated_part.find('{')
    end_index = generated_part.rfind('}')
-   if start_index != -1 and end_index != -1 and end_index > start_index:
+    if start_index != -1 and end_index != -1 and end_index > start_index:
             json_str = generated_part[start_index : end_index + 1]
             logging.info(f"Attempting to parse JSON: {json_str[:200]}...") # Log preview
             try:
@@ -248,62 +248,12 @@ def analyze_ingredients_llm(ingredients):
             except json.JSONDecodeError as json_err:
                 logging.error(f"Failed to decode JSON from LLM response: {json_err}")
                 logging.error(f"Invalid JSON string was: {json_str}")
+
                 error_context_start = max(0, json_err.pos - 20)
                 error_context_end = min(len(json_str), json_err.pos + 20)
                 error_snippet = json_str[error_context_start:error_context_end]
                 logging.error(f"JSON error near position {json_err.pos}: ...{error_snippet}...")
                 return {"error": f"LLM response was not valid JSON ({json_err})", "raw_response": generated_part}
-        else:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
