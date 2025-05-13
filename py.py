@@ -262,6 +262,21 @@ def analyze_ingredients_llm(ingredients):
     except Exception as e:
         logging.error(f"Error during LLM inference or processing: {e}", exc_info=True) # Log traceback
         return {"error": f"LLM generation failed: {e}"}
+def format_results(analysis_data):
+    """Formats the JSON analysis into a user-friendly string."""
+    if "error" in analysis_data:
+        logging.error(f"Analysis failed: {analysis_data['error']}")
+        raw = analysis_data.get('raw_response', '')
+
+        raw_preview = raw[:1000] + ('...' if len(raw) > 1000 else '')
+        return f"❌ Analysis Failed: {analysis_data['error']}\n" + (f"Raw Response Preview:\n{raw_preview}" if raw else "")
+
+    analysis_list = analysis_data.get('analysis', [])
+
+    if not analysis_list:
+        return "✅ No harmful or controversial ingredients detected based on the analysis."
+
+    report = f"🚨 {len(analysis_list)} Potentially Harmful/Controversial Ingredient(s) Found:\n"
 
 
 
