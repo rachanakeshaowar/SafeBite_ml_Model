@@ -227,6 +227,12 @@ def analyze_ingredients_llm(ingredients):
 
                   logging.warning("Could not reliably isolate generated text from prompt. Using full output.")
                   generated_part = response_text
+   logging.info(f"LLM raw generated part received (length: {len(generated_part)}).")
+
+
+
+   start_index = generated_part.find('{')
+   end_index = generated_part.rfind('}')
 
 
 
