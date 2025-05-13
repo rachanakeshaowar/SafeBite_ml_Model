@@ -277,6 +277,17 @@ def format_results(analysis_data):
         return "✅ No harmful or controversial ingredients detected based on the analysis."
 
     report = f"🚨 {len(analysis_list)} Potentially Harmful/Controversial Ingredient(s) Found:\n"
+    for item in analysis_list:
+        try:
+            if not all(k in item for k in ["ingredient", "safety_index", "unsafe_for", "severity"]):
+                 report += f"\n⚠️ Skipping malformed item: {item}\n"
+                 continue
+            # Add fallback gets for inner keys too
+            unsafe_for = item.get('unsafe_for', {})
+            age_groups = unsafe_for.get('age_groups', [])
+            diseases = unsafe_for.get('diseases', [])
+            allergies = unsafe_for.get('allergies', [])
+
 
 
 
