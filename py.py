@@ -324,6 +324,12 @@ def format_results(analysis_data):
         return
     print("\n--- Raw OCR Text (Preview) ---")
     print(raw_text[:500] + ('...' if len(raw_text) > 500 else ''))
+    ingredients = clean_ingredients(raw_text)
+    if not ingredients:
+        print("\n--- Ingredient Extraction Failed ---")
+        print("Could not detect or clean any ingredients from the OCR text.")
+
+        return
 
 
 
