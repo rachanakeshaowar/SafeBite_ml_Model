@@ -308,6 +308,15 @@ def format_results(analysis_data):
              report += f"\n⚠️ Error formatting item: {item} - Error: {e}\n"
 
     return report
+ def analyze_product(image_path):
+    logging.info(f"--- Starting Analysis for {image_path} ---")
+    # Ensure model is loaded FIRST
+    if not load_model():
+        print("##############################################")
+        print("### FATAL: Failed to load language model ###")
+        print("##############################################")
+        print("Please check the logs above for errors (e.g., Hugging Face Hub connection, memory issues).")
+        return
 
 
 
