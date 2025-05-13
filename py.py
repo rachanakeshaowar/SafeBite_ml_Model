@@ -287,7 +287,27 @@ def format_results(analysis_data):
             age_groups = unsafe_for.get('age_groups', [])
             diseases = unsafe_for.get('diseases', [])
             allergies = unsafe_for.get('allergies', [])
+             report += f"\n<-------------------->\n"
+            report += f"⚠️ **{item.get('ingredient', 'Unknown Ingredient')}**\n"
+            report += f"   - Safety Index: {item.get('safety_index', 'N/A')}/5 (1=High Concern, 5=Low Concern/Allergen)\n"
+            report += f"   - Severity Level: **{str(item.get('severity', 'N/A')).upper()}**\n"
 
+            warnings = []
+            if age_groups:
+                warnings.append(f"🚼 **Avoid for:** {', '.join(age_groups)}")
+            if diseases:
+                warnings.append(f"🏥 **Risky with:** {', '.join(diseases)}")
+            if allergies:
+                warnings.append(f"❗ **Potential Allergen:** {', '.join(allergies)}")
+
+            if warnings:
+                 report += "\n".join([f"   - {w}" for w in warnings]) + "\n"
+            else:
+                 report += "   - No specific avoidance groups listed (check general safety/severity).\n"
+        except Exception as e:
+             report += f"\n⚠️ Error formatting item: {item} - Error: {e}\n"
+
+    return report
 
 
 
