@@ -241,6 +241,13 @@ def analyze_ingredients_llm(ingredients):
                 if isinstance(analysis_data, dict) and "analysis" in analysis_data and isinstance(analysis_data["analysis"], list):
                     logging.info("Successfully parsed JSON response from LLM.")
                     return analysis_data
+                else:
+                     logging.error(f"Parsed JSON has unexpected structure: {analysis_data}")
+                     return {"error": "LLM response has invalid JSON structure", "raw_response": generated_part}
+
+            except json.JSONDecodeError as json_err:
+                logging.error(f"Failed to decode JSON from LLM response: {json_err}")
+                logging.error(f"Invalid JSON string was: {json_str}")
 
 
 
